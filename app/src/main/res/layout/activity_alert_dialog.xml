@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#A83FE8"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="сколько раундов играем?"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <requestFocus
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edText"
+        android:layout_width="93dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+</LinearLayout>

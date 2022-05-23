@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/classicback"
+    tools:context=".games.YesOrNoGame">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="262dp"
+        android:layout_height="144dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.621">
+
+        <ImageButton
+            android:id="@+id/noBtn"
+            android:layout_width="187dp"
+            android:layout_height="63dp"
+            android:background="@drawable/btnn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textNo"
+            android:layout_width="70dp"
+            android:layout_height="47dp"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/noBtn"
+            app:layout_constraintEnd_toEndOf="@+id/noBtn"
+            app:layout_constraintStart_toStartOf="@+id/noBtn"
+            app:layout_constraintTop_toTopOf="@+id/noBtn"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="262dp"
+        android:layout_height="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.621">
+
+        <ImageButton
+            android:id="@+id/yesBtn"
+            android:layout_width="187dp"
+            android:layout_height="63dp"
+            android:background="@drawable/btnn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textYes"
+            android:layout_width="70dp"
+            android:layout_height="47dp"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/yesBtn"
+            app:layout_constraintEnd_toEndOf="@+id/yesBtn"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="@+id/yesBtn"
+            app:layout_constraintTop_toTopOf="@+id/yesBtn"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="397dp"
+        android:layout_height="157dp"
+        android:layout_marginBottom="184dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="399dp"
+            android:layout_height="136dp"
+            android:layout_marginEnd="76dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/text" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="234dp"
+            android:layout_height="54dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView8"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView8"
+            app:layout_constraintVertical_bias="0.365" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="704dp"
+        android:layout_height="70dp"
+        android:background="@drawable/gameheader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/timerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="16dp"
+
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/rd"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rd"
+            android:layout_width="48dp"
+            android:layout_height="41dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="96dp"
+            android:text="1"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

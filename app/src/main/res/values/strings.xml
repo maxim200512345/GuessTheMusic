@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">App</string>
+    <string name="smlts">Nirvana-Smells like teen spirit</string>
+    <string name="idb">Imagine dragons-believer</string>
+    <string name="mjsc">Michael Jackson-smooth criminal</string>
+    <string name="cgp">coulio-gangstas paradise</string>
+    <string name="start">начать</string>
+    <string name="stats">статистика</string>
+    <string name="classic_text">классический режим</string>
+    <string name="bestResult">лучший результат - 0</string>
+    <string name="yesOrNo">да или нет</string>
+    <string name="whoIsSinger">кто исполнитель</string>
+</resources>
