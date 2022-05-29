@@ -1,6 +1,8 @@
 package com.codecademy.app.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +12,7 @@ import com.codecademy.app.db.DbStats;
 import com.codecademy.app.db.models.StatsEntity1;
 import com.codecademy.app.db.models.StatsEntity2;
 import com.codecademy.app.db.models.StatsEntity3;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,7 +22,7 @@ public class Statistics extends AppCompatActivity {
 
     private TextView classicResult, yesOrNoResult, whoIsSingerResult;
     private DbStats dbStats;
-
+    private FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +31,9 @@ public class Statistics extends AppCompatActivity {
         set1Stats();
         set2Stats();
         set3Stats();
-
+        fab.setOnClickListener(v -> {
+            startActivity(new Intent(this, MainActivity.class));
+        });
 
     }
     private void init(){
@@ -36,6 +41,7 @@ public class Statistics extends AppCompatActivity {
         yesOrNoResult = findViewById(R.id.YesOrNoResult);
         whoIsSingerResult = findViewById(R.id.whoIsSingerResult);
         dbStats = DbStats.getInstance(this);
+        fab = findViewById(R.id.floatingActionButton);
     }
 
     private void set1Stats(){

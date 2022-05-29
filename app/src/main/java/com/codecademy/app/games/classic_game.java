@@ -314,7 +314,12 @@ public class classic_game extends AppCompatActivity {
                     finish();
 
                 });
-        builder.show();
+        try {
+            builder.show();
+        }
+        catch (WindowManager.BadTokenException e) {
+            //use a log message
+        }
 
     }
     public void showPromIfTrueDialog(Context context){ // dialog if answer is correct
@@ -327,7 +332,12 @@ public class classic_game extends AppCompatActivity {
                     newQuestion(turn);
                     dialog.dismiss();
                 });
-        builder.show();
+        try {
+            builder.show();
+        }
+        catch (WindowManager.BadTokenException e) {
+            //use a log message
+        }
     }
     public void showPromIfFalseDialog(Context context){ // dialog if answer is incorrect
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -339,7 +349,12 @@ public class classic_game extends AppCompatActivity {
                     newQuestion(turn);
                     dialog.dismiss();
                 });
-        builder.show();
+        try {
+            builder.show();
+        }
+        catch (WindowManager.BadTokenException e) {
+            //use a log message
+        }
     }
     public  void startTimer(){
         if (timer == null){

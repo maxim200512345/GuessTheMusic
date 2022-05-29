@@ -23,10 +23,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class SelectTypeOfGame extends AppCompatActivity {
 
     private ImageView classicButton, yesOrNoButton, whoIsSingerButton;
-    private FloatingActionButton back;
-    private RadioButton Rbtn1, Rbtn2, Rbtn3;
-    private RadioGroup radioGroup;
+
     private EditText number;
+
+    private FloatingActionButton fab;
 
     LayoutInflater li;
     View promptsView;
@@ -63,9 +63,8 @@ public class SelectTypeOfGame extends AppCompatActivity {
         classicButton.setOnClickListener(v -> makeFirstDialog());
         yesOrNoButton.setOnClickListener(v -> makeSecondDialog());
         whoIsSingerButton.setOnClickListener(v -> makeThirdDialog());
-        back.setOnClickListener(v -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+        fab.setOnClickListener(v -> {
+            startActivity(new Intent(this, MainActivity.class));
         });
 
 
@@ -75,11 +74,10 @@ public class SelectTypeOfGame extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
     private void init(){
-
+        fab = findViewById(R.id.floatingActionButton);
         classicButton = findViewById(R.id.classicButton);
         yesOrNoButton = findViewById(R.id.yesOrNoButton);
         whoIsSingerButton = findViewById(R.id.whoIsSingerButton);
-        back = findViewById(R.id.floatingActionButton);
         li = LayoutInflater.from(SelectTypeOfGame.this);
         promptsView = li.inflate(R.layout.activity_alert_dialog, null);
         number = promptsView.findViewById(R.id.edText);

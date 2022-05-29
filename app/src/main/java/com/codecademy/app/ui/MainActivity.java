@@ -2,6 +2,7 @@ package com.codecademy.app.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnStats;
     Animation scaleUp, scaleDown;
     DbStats dbStats;
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,9 +54,19 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
-        btnStats.setOnClickListener(v -> {
+        btnStats.setOnTouchListener((v, event) -> {
+            if (event.getAction() == MotionEvent.ACTION_DOWN){
+                btnStats.startAnimation(scaleUp);
+                Intent intent = new Intent(MainActivity.this , Statistics.class);
+                startActivity(intent);
+            }else if(event.getAction() == MotionEvent.ACTION_UP){
+                btnStats.startAnimation(scaleDown);
+            }
+            return true;
+        });
+        /*btnStats.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, Statistics.class);
             startActivity(intent);
-        });
+        });*/
     }
 }

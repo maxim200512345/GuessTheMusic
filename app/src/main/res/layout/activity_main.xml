@@ -9,14 +9,13 @@
 
     <Button
         android:id="@+id/buttonStats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="120dp"
-        android:background="@drawable/button_background"
+        android:layout_width="152dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="136dp"
+        android:background="@drawable/stats"
         android:elevation="6dp"
         android:stateListAnimator="@null"
-        android:text="@string/stats"
         android:translationZ="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

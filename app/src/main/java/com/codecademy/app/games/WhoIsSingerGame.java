@@ -354,9 +354,8 @@ public class WhoIsSingerGame extends AppCompatActivity {
                         " продолжаем?")
                 .setIcon(R.mipmap.ic_launcher)
                 .setPositiveButton("да", (dialog, id) -> {
-                    // Закрываем окно
+                    newQuestion(turn);
                     dialog.dismiss();
-                    finish();
 
                 });
         try {

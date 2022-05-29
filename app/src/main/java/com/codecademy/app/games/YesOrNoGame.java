@@ -229,7 +229,12 @@ public class YesOrNoGame extends AppCompatActivity {
 
 
                 });
-        builder.show();
+        try {
+            builder.show();
+        }
+        catch (WindowManager.BadTokenException e) {
+            //use a log message
+        }
     }
     public void showPromIfFalseDialog(Context context){ // dialog if answer is incorrect
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -242,7 +247,12 @@ public class YesOrNoGame extends AppCompatActivity {
                     newQuestion(turn);
                     dialog.dismiss();
                 });
-        builder.show();
+        try {
+            builder.show();
+        }
+        catch (WindowManager.BadTokenException e) {
+            //use a log message
+        }
     }
     private void addToDb(int num){
         dbStats.dao3().insertResult(new StatsEntity3(num));
