@@ -368,7 +368,7 @@ public class WhoIsSingerGame extends AppCompatActivity {
     }
     public  void startTimer(){
         if (timer == null){
-            timer = new CountDownTimer(5000, 1000) {
+            timer = new CountDownTimer(15000, 1000) {
                 @Override
                 public void onTick(long millisUntilFinished) {
                     String times = "осталось до конца раунда - " + millisUntilFinished / 1000;
@@ -394,7 +394,7 @@ public class WhoIsSingerGame extends AppCompatActivity {
         }
         else{
             timer.cancel();
-            timer = new CountDownTimer(5000, 1000) {
+            timer = new CountDownTimer(15000, 1000) {
                 @SuppressLint("SetTextI18n")
                 @Override
                 public void onTick(long millisUntilFinished) {

@@ -326,7 +326,7 @@ public class classic_game extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("верно")
                 .setMessage("это была песня " + name +
-                        "продолжаем?")
+                        " продолжаем?")
                 .setIcon(R.mipmap.ic_launcher)
                 .setPositiveButton("да", (dialog, id) -> {
                     newQuestion(turn);
@@ -342,7 +342,7 @@ public class classic_game extends AppCompatActivity {
     public void showPromIfFalseDialog(Context context){ // dialog if answer is incorrect
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("неверно")
-                .setMessage("это была песня  " + name +
+                .setMessage("это была песня  " + name + " " +
                         " продолжаем?")
                 .setIcon(R.mipmap.ic_launcher)
                 .setPositiveButton("да", (dialog, id) -> {
